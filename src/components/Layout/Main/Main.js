@@ -19,6 +19,7 @@ const Main = ({match}) => {
           </div>
           <div className="rightContainer">
               <Switch>
+                <Route exact path="/" component={Welcome}/>
                 <Route exact path="/competion/:league_id/" component={Welcome}/>
                 <Route exact path="/competion/:league_id/standings" component={Standings}/>
                 <Route exact path="/competion/:league_id/teams" component={Teams}/>
