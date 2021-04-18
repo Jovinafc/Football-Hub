@@ -1,0 +1,27 @@
+.scoreItem {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  border: 1px solid dodgerblue;
+  margin: 2rem;
+  background-color: #6b7280;
+  color: white;
+  min-height: 3rem;
+}
+
+.scoreItem:nth-child(odd) {
+  background-color: #4b5563;
+}
+
+@media (max-width: 500px) {
+  .scoreItem {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr;
+    border: 1px solid dodgerblue;
+    margin: 1rem;
+    background-color: #6b7280;
+    color: white;
+    min-width: 500px;
+  }
+}

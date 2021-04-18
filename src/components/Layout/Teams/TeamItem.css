@@ -1,0 +1,27 @@
+.teamItem {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #1f2937;
+  margin: 1rem;
+  padding: 1rem;
+  width: 50vh;
+  height: 2rem;
+  align-items: center;
+  cursor: pointer;
+  background-color: oldlace;
+}
+
+.teamItem > img {
+  width: 3rem;
+}
+
+.teamItem > .teamName {
+  margin-left: 2rem;
+  font-size: medium;
+}
+
+.teamItem:hover {
+  background-color: grey;
+  transition: width 2s;
+  padding: 1rem;
+}

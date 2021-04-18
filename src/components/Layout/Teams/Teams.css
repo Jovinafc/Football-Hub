@@ -1,0 +1,14 @@
+.teams__header {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  margin: 0rem 5rem;
+  justify-content: space-between;
+}
+
+.teamsList {
+  display: flex;
+  flex-flow: row wrap;
+  /* padding-left: 5rem; */
+}

@@ -1,0 +1,35 @@
+.navHeader {
+  background-color: #93c5fd;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navHeader__head {
+  margin: 1rem;
+  font-family: serif;
+}
+
+.navHeader__content {
+  display: flex;
+}
+
+.navHeader__content > div {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.navHeader__toggle {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .navHeader__content {
+    display: none;
+  }
+
+  .navHeader__toggle {
+    display: block;
+  }
+}

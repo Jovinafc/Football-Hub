@@ -1,0 +1,51 @@
+.matchItem {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 1fr 2fr 0.5fr;
+  margin: 1rem 1rem;
+  border: 1px solid dodgerblue;
+  align-items: center;
+  cursor: pointer;
+}
+
+.finished {
+  background-color: #9ca3af;
+}
+
+.postponed {
+  display: none;
+}
+
+.notFinished {
+  background-color: #e5e7eb;
+}
+
+.draw {
+  border-bottom: 2px solid grey;
+}
+
+.fhome_team {
+  border-bottom: 2px solid green;
+}
+
+.shome_team {
+  border-bottom: 2px solid red;
+}
+
+.faway_team {
+  border-bottom: 2px solid red;
+}
+
+.saway_team {
+  border-bottom: 2px solid green;
+}
+.matchItem__timedate {
+  display: flex;
+  background-color: #4b5563;
+  color: white;
+  flex-direction: column;
+}
+
+.matchItem__timedate > h6,
+p {
+  margin: 0rem;
+}

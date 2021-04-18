@@ -1,0 +1,10 @@
+.standingDiv {
+  overflow-x: scroll;
+}
+
+.standItemMain > div {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
