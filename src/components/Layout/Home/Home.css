@@ -4,3 +4,10 @@
   max-height: 85vh;
   object-fit: cover;
 }
+
+@media (max-width: 500px) {
+  .image {
+    width: 100vw;
+    height: 90vh;
+  }
+}

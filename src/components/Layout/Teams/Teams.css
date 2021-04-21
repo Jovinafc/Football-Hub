@@ -1,14 +1,14 @@
 .teams__header {
   display: flex;
-  flex-direction: row;
-  text-align: center;
   align-items: center;
-  margin: 0rem 5rem;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .teamsList {
   display: flex;
   flex-flow: row wrap;
+  /* border: 1px solid black; */
+  justify-content: center;
+
   /* padding-left: 5rem; */
 }

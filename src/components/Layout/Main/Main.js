@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Switch, Route } from 'react-router-dom'
+import { NavLink, Switch, Route } from 'react-router-dom'
 import Scorers from '../Scorers/Scorers';
 import Matches from '../Matches/Matches';
 import Teams from '../Teams/Teams';
@@ -12,10 +12,10 @@ const Main = ({match}) => {
     return (
         <div className="mainContainer">
           <div className="leftContainer">
-            <p><Link to={`/competion/${match.params.league_id}/teams`}>Teams</Link></p>
-            <p><Link to={`/competion/${match.params.league_id}/standings`}>Standings</Link></p>
-            <p><Link to={`/competion/${match.params.league_id}/matches`}>Matches</Link></p>
-            <p><Link to={`/competion/${match.params.league_id}/scorers`}>Scorers</Link></p>
+            <p><NavLink activeClassName="active" to={`/competion/${match.params.league_id}/teams`}>Teams</NavLink></p>
+            <p><NavLink activeClassName="active" to={`/competion/${match.params.league_id}/standings`}>Standings</NavLink></p>
+            <p><NavLink activeClassName="active" to={`/competion/${match.params.league_id}/matches`}>Matches</NavLink></p>
+            <p><NavLink activeClassName="active" to={`/competion/${match.params.league_id}/scorers`}>Scorers</NavLink></p>
           </div>
           <div className="rightContainer">
               <Switch>

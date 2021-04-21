@@ -49,3 +49,39 @@
 p {
   margin: 0rem;
 }
+
+@media (max-width: 500px) {
+  .matchItem {
+    font-size: 1rem;
+    display: block;
+    /* display: grid;
+    grid-template-columns: 0.8fr 2fr 1fr 2fr 0.5fr; */
+    margin: 1rem 0.5rem;
+    border: 1px solid dodgerblue;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .draw {
+    border-bottom: none;
+  }
+
+  .fhome_team {
+    border-bottom: none;
+  }
+
+  .shome_team {
+    border-bottom: none;
+  }
+
+  .faway_team {
+    border-bottom: none;
+  }
+
+  .saway_team {
+    border-bottom: none;
+  }
+  .postponed {
+    display: none;
+  }
+}

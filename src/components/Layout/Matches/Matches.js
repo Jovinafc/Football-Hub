@@ -4,6 +4,8 @@ import MatchItem from './MatchItem';
 import './Matches.css';
 import { GrLinkNext, GrLinkPrevious } from 'react-icons/gr';
 import { FcNext } from 'react-icons/fc';
+import Loader from "react-loader-spinner";
+
 
 const Matches = ({match}) => {
     const [currentGW, setcurrentGW] = useState();
@@ -32,7 +34,10 @@ const Matches = ({match}) => {
             let totalGW = res.data.count / 10;
             setTotalGW(totalGW);
             let ss = Array.from(Array(totalGW).keys())
-            setTotalGWArray(ss);
+            let ms = ss.map(s => {
+                return s=s+1;
+            });
+            setTotalGWArray(ms);
             setcurrentGW(res.data.matches[1].season.currentMatchday);
             let currentGW = res.data.matches[1].season.currentMatchday;
             return currentGW;
@@ -40,7 +45,7 @@ const Matches = ({match}) => {
             getMatches(res);
          })
         .catch(err => console.log(err));
-    },[]);
+    },[match.params.league_id]);
 
     const changeBeforeGW = (currentGW) => {
         let newGw = parseInt(currentGW) - 1;
@@ -63,10 +68,12 @@ const Matches = ({match}) => {
 
     return (
         <div>
-            Matches
+            <h3>Matches</h3>
             {
                 matchesList.length === 0 ?
-                <div>Loading...</div> :
+                <div>
+                    <Loader type="Oval" color="#111827" height={80} width={80}/>
+                </div> :
                 <div>
                 <div className="matchHeader">
                 <button onClick={() => changeBeforeGW(currentGW)}><GrLinkPrevious /></button>
@@ -76,7 +83,7 @@ const Matches = ({match}) => {
                 <button onClick={() => changeAfterGW(currentGW)}> <GrLinkNext /></button>
                 {/* Select GW: */}
                 <div className="selectCont">
-                <p>Select GW</p>
+                <p style={{marginRight:'0.5rem'}}>Select GW </p>
                 <select 
                 placeholder="Select a GW"
                 className="selectDiv"

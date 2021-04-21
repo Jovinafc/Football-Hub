@@ -6,7 +6,6 @@ import Sidebar from '../Sidebar/Sidebar';
 const Navbar = () => { 
     const [open, setOpen] = useState(false);
     const toggleSidebar = () => {
-        console.log(open);
         setOpen(!open);
     }
 
@@ -23,7 +22,9 @@ const Navbar = () => {
                     <NavLink />
                 </div>
                 <div onClick={() => toggleSidebar()} className="navHeader__toggle">
-                    ToggleDiv
+                    <div className="tog">a</div>
+                    <div className="tog">a</div>
+                    <div className="tog">a</div>
                 </div>
                 <Sidebar closed={sideDrawerClosed} open={open} />
             </div>
